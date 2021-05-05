@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/navigation_main"
+    app:startDestination="@id/map">
+
+    <bottom_navigation_fragment
+        android:id="@+id/connection_menu"
+        android:name="com.enteld.gpstracker.feature.connectionmenu.ui.ConnectionMenuFragment"
+        android:label="ConnectionMenu"/>
+
+    <bottom_navigation_fragment
+        android:id="@+id/map"
+        android:name="com.enteld.gpstracker.feature.map.ui.MapFragment"
+        android:label="Map"/>
+</navigation>
