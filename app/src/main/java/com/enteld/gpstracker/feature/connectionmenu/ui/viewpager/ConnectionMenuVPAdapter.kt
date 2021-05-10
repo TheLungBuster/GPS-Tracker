@@ -3,9 +3,11 @@ package com.enteld.gpstracker.feature.connectionmenu.ui.viewpager
 import android.view.ViewGroup
 import androidx.lifecycle.LifecycleOwner
 import androidx.recyclerview.widget.RecyclerView
+import com.enteld.gpstracker.feature.connectionmenu.presentation.ConnectionMenuViewModel
 
 class ConnectionMenuVPAdapter(
-    private val lifecycleOwner: LifecycleOwner
+    private val lifecycleOwner: LifecycleOwner,
+    private val viewModel: ConnectionMenuViewModel
 ) : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
 
     companion object {
@@ -22,6 +24,7 @@ class ConnectionMenuVPAdapter(
                 ConnectionMenuViewHolder.from(
                     parent = parent,
                     lifecycleOwner = lifecycleOwner,
+                    viewModel = viewModel,
                     pageType = PageType.FollowersPage
                 )
             }
@@ -30,6 +33,7 @@ class ConnectionMenuVPAdapter(
                 ConnectionMenuViewHolder.from(
                     parent = parent,
                     lifecycleOwner = lifecycleOwner,
+                    viewModel = viewModel,
                     pageType = PageType.FollowedPage
                 )
             }

@@ -1,6 +1,7 @@
 package com.enteld.gpstracker
 
 import android.app.Application
+import com.enteld.gpstracker.feature.connectionmenu.di.ConnectionMenuModule
 import org.koin.android.ext.koin.androidContext
 import org.koin.android.ext.koin.androidLogger
 import org.koin.core.context.startKoin
@@ -13,6 +14,7 @@ class App: Application() {
         startKoin {
             androidLogger(Level.ERROR)
             androidContext(this@App)
+            modules(ConnectionMenuModule)
         }
     }
 }

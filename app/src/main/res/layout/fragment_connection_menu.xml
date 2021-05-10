@@ -25,5 +25,6 @@
     <androidx.viewpager2.widget.ViewPager2
         android:id="@+id/connection_menu_view_pager"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"/>
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"/>
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

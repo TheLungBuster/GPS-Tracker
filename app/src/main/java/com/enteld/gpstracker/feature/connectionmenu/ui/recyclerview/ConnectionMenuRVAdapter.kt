@@ -1,15 +1,13 @@
 package com.enteld.gpstracker.feature.connectionmenu.ui.recyclerview
 
 import android.view.ViewGroup
-import androidx.lifecycle.LifecycleOwner
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import com.enteld.gpstracker.domain.entity.UserCard
 import com.enteld.gpstracker.feature.connectionmenu.ui.viewpager.PageType
 
 class ConnectionMenuRVAdapter(
-    lifecycleOwner: LifecycleOwner,
-    pageType: PageType
+    private val pageType: PageType
 ): ListAdapter<UserCard, ConnectionMenuItemViewHolder>(ConnectionMenuDiffUtilCallback()) {
 
     override fun onCreateViewHolder(
@@ -18,7 +16,7 @@ class ConnectionMenuRVAdapter(
     ): ConnectionMenuItemViewHolder = ConnectionMenuItemViewHolder.from(parent)
 
     override fun onBindViewHolder(holder: ConnectionMenuItemViewHolder, position: Int) =
-        holder.bind(getItem(position))
+        holder.bind(getItem(position), pageType)
 }
 
 class ConnectionMenuDiffUtilCallback: DiffUtil.ItemCallback<UserCard>() {
