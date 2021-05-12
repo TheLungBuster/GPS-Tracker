@@ -1,11 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
 	xmlns:app="http://schemas.android.com/apk/res-auto"
-	xmlns:tools="http://schemas.android.com/tools"
 	android:id="@+id/navigation_global"
-	app:startDestination="@+id/main">
+	app:startDestination="@+id/login">
 
 	<fragment
 		android:id="@+id/main"
 		android:name="com.enteld.gpstracker.feature.main.MainFragment"/>
+
+	<fragment
+		android:id="@+id/login"
+		android:name="com.enteld.gpstracker.feature.login.ui.LoginFragment">
+
+		<action
+			android:id="@+id/action_login_to_main"
+			app:destination="@id/main"
+			app:popUpTo="@+id/navigation_global"/>
+	</fragment>
 </navigation>
