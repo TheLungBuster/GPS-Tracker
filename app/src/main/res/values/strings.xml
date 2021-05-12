@@ -5,9 +5,13 @@
 	<string name="title_dashboard">Карта</string>
 
 	<string name="gps_tracker_connection_menu_title">Меню подключений</string>
+	<string name="gps_tracker_map_title">Карта</string>
+
     <string name="has_permission_switch_title">Разрешить получение координат</string>
 	<string name="is_shown_switch_title">Отображать на карте</string>
 
 	<string name="followed_user_title">Подписчики</string>
 	<string name="followers_user_title">Подписки</string>
+
+	<string name="mapbox_access_token">pk.eyJ1Ijoia29weXRva25zayIsImEiOiJja29saXlwMm4wdHJwMnBxZmEzZmF6ODR4In0.3a2UxVYBb9Sm3A2t_NTfRg</string>
 </resources>

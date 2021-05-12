@@ -25,7 +25,7 @@ abstract class BindingFragment<VB : ViewBinding> : Fragment() {
         return _binding?.root
     }
 
-    protected abstract fun otherSetups()
+    protected abstract fun otherSetups(savedInstanceState: Bundle? = null)
 
     protected abstract fun binding(
         inflater: LayoutInflater,

@@ -11,8 +11,9 @@ import com.enteld.gpstracker.core.BindingFragment
 import com.enteld.gpstracker.core.KeepStateNavigator
 import com.enteld.gpstracker.core.setupWithKeepStateNavController
 import com.enteld.gpstracker.databinding.FragmentMainBinding
+import com.mapbox.mapboxsdk.Mapbox
 
-class MainFragment: BindingFragment<FragmentMainBinding>() {
+class MainFragment : BindingFragment<FragmentMainBinding>() {
 
     private var navigationInit = false
     private lateinit var navController: NavController
@@ -46,5 +47,9 @@ class MainFragment: BindingFragment<FragmentMainBinding>() {
         binding.bottomNavigation.setupWithKeepStateNavController(navController, navigator)
     }
 
-    override fun otherSetups() {}
+    override fun otherSetups(savedInstanceState: Bundle?) {
+        context?.let { context ->
+            Mapbox.getInstance(context, getString(R.string.mapbox_access_token))
+        }
+    }
 }

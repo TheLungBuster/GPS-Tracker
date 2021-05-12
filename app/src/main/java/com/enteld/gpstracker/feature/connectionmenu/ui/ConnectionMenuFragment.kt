@@ -21,7 +21,7 @@ class ConnectionMenuFragment: BindingFragment<FragmentConnectionMenuBinding>() {
         savedInstanceState: Bundle?
     ) = FragmentConnectionMenuBinding.inflate(inflater, container, false)
 
-    override fun otherSetups() {
+    override fun otherSetups(savedInstanceState: Bundle?) {
         initViewPager()
     }
 
